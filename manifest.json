@@ -6,24 +6,24 @@
 
 	"version": "1.0",
 	
-	"content_scripts":{
-		"matches": ["http://www.youtube.com/*"],
-		"js":["script.js"]
-
-	},
-
-	"browser_action":{
-		"default_icon": "winner64.png",
-		"default_popup": "index.html"
-
-	},
-
-	"permissions":[
-		"activeTab",
-		"https://youtube.com/"
-	]
+"permissions": [
+"activeTab",
+"https://www.google.com/"
+],
+	
 
 
+	"content_scripts": [
+	{
+		"matches":["https://www.facebook.com/"],
+		"js": ["jquery.min.js","script.js","p5.min.js","riddles.js"],
+		"run_at": "document_start"
 
+	}
+	],
+ "browser_action": {
+    "default_icon": "winner64.png",
+    "default_popup": "index.html"
+  }
 
 }
