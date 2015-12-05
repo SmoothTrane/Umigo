@@ -5,6 +5,12 @@
 	"description": "Provides a simple game for whenever the youtube video is loading",
 
 	"version": "1.0",
+	
+	"content_scripts":{
+		"matches": ["http://www.youtube.com/*"],
+		"js":["script.js"]
+
+	},
 
 	"browser_action":{
 		"default_icon": "winner64.png",
@@ -14,8 +20,9 @@
 
 	"permissions":[
 		"activeTab",
-		"https://ajax.googleapis.com/ "
+		"https://youtube.com/"
 	]
+
 
 
 
